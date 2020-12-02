@@ -1,14 +1,14 @@
 const net = require('net');
 
-/**
- * Establishes connection with the game server
- */
+
+// ESTABLISHES CONNECTION WITH THE GAME SERVER
+ 
 const connect = function() {
   const conn = net.createConnection({ 
     host: '10.0.2.15',
     port: 50541
   });
-  // interpret incoming data as text
+  // INTERPRET INCOMING DATA AS TEXT
   conn.setEncoding('utf8'); 
 
   // TRIGGER CONNECT EVENT AS SOON AS A CONNECTION IS ESTABLISHED TO THE SERVER
