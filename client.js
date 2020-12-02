@@ -14,7 +14,8 @@ const connect = function() {
   // TRIGGER CONNECT EVENT AS SOON AS A CONNECTION IS ESTABLISHED TO THE SERVER
   conn.on('connect', () => {
     console.log('Successfully connected to the game server');
-    conn.write('Name: Zac')
+    // SEND NAME TO THE SERVER
+    conn.write('Name: Zac');
     
   });
 
