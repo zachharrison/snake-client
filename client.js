@@ -10,7 +10,15 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
-  
+
+  // TRIGGER CONNECT EVENT AS SOON AS A CONNECTION IS ESTABLISHED TO THE SERVER
+  conn.on('connect', () => {
+    console.log('Successfully connected to the game server');
+    conn.write('Name: Zac')
+    
+  });
+
+
   // USE EVENT HANDLER TO HANDLE INCOMING DATA AND LOG IT TO THE CONSOLE.
   conn.on('data', (data) => {
     console.log(data)
